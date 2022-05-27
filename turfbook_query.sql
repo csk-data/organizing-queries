@@ -1,6 +1,7 @@
 WITH voters AS (
   SELECT 
-   dnc_precinct_id, count(DISTINCT myv_van_id) AS reg_voters
+   dnc_precinct_id, 
+   count(DISTINCT myv_van_id) AS reg_voters
   FROM
     `democrats.analytics_ks.person`
   WHERE
